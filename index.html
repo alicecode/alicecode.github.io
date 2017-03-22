@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .box{
+        width:200px;
+        height:200px;
+        background-color: #ccc;
+    }
+    .cav{
+        width:500px;
+        height:500px;
+        border:2px solid #0f0;
+    }
+    #mycanvas{
+        width:100%;
+        height:100%;
+    }
+    .rec{fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,255,0);width:100px;height:100px;}
+    .col4 {
+        width: 600px;
+        column-count: 4;
+        column-width: 200px;
+        height:100px;
+    }
+    .father{
+        overflow: hidden;
+        width: 600px;
+    }
+    #scroll-1 {width:200px;height:200px; overflow:auto;}
+    #scroll-1 div { width:400px; height:400px;}    
+    #scroll-1::-webkit-scrollbar { width:10px;height:10px;}
+    #scroll-1::-webkit-scrollbar-button    {background-color:#FF7677; }
+    #scroll-1::-webkit-scrollbar-track     {background:#FF66D5; }
+    #scroll-1::-webkit-scrollbar-thumb{background:#FFA711; border-radius:4px;}
+    #scroll-1::-webkit-scrollbar-corner {background:#82AFFF;}
+    #scroll-1::-webkit-scrollbar-resizer  { background:#FF0BEE; }
+    </style>
+</head>
+<body>
+<div id="scroll-1">
+    <div></div>
+</div>
+    <!-- <div class="box"></div>
+    <div class="cav">
+        <canvas id="mycanvas"></canvas>
+    </div>
+    <img style="display:none"id="scream" src="./imgsave/page1_logo.png" alt="">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+         <rect class="rec"/>
+    </svg>
+     <div class="father">
+            <p class="col4">
+                上面几个column-count示意都是定了个宽度600px，高度是默认的auto，因此，分栏的表现都很乖巧，反正高度是无限的，无论你设置多少栏，我都可以通过调整高度来实现。但是，如果我们高度也设定固定的值，例如高度60px，则此时很多有意思的事情就会发生了。如果说仅仅只是指定了column-count，至少在容器元素的可视尺寸范围内，还是设定的分栏数目，例如column-count:3，虽然视觉上远不止3栏，但是上面几个column-count示意都是定了个宽度600px，高度是默认的auto，因此，分栏的表现都很乖巧，反正高度是无限的，无论你设置多少栏，我都可以通过调整高度来实现。但是，如果我们高度也设定了固定的值，例如高度60px，则此时很多有意思的事情就会发生了。如果说仅仅只是指定了column-count，至少在容器元素的可视尺寸范围内，还是设定的分栏数目，例如column-count:3，虽然视觉上远不止3栏，但是上面几个column-count示意都是定了个宽度600px，高度是默认的auto，因此，分栏的表现都很乖巧，反正高度是无限的，无论你设置多少栏，我都可以通过调整高度来实现。但是，如果我们高度也设定了固定的值，例如高度60px，则此时很多有意思的事情就会发生了。如果说仅仅只是指定了column-count，至少在容器元素的可视尺寸范围内，还是设定的分栏数目，例如column-count:3，虽然视觉上远不止3栏，但是
+            </p>
+    </div> -->
+
+
+</body>
+<script type='text/javascript'>
+    // var  cav = document.getElementById("mycanvas");
+    // var ctx = cav.getContext("2d");
+    // ctx.fillStyle="#aaa";
+    // ctx.fillRect(10,0,100,5);
+    // ctx.moveTo(5,5);
+    // ctx.lineTo(100,100);
+    // ctx.stroke();
+    // ctx.beginPath();
+    // ctx.arc(95,50,40,0,2*Math.PI);
+    // ctx.stroke();
+    // ctx.font="20px Arial";
+    // ctx.fillText("Hello World 我",10,50);
+    // var grd=ctx.createLinearGradient(0,0,200,0);
+    // grd.addColorStop(0,"red");
+    // grd.addColorStop(1,"white");
+    // ctx.fillStyle=grd;
+    // ctx.fillRect(50,50,50,50);
+    // var img=document.getElementById("scream");
+    // img.onload = function() {
+    //     ctx.drawImage(img,10,10);
+    // } ;
+
+function A(){
+    var x = 1;
+    return function(){
+        x++;
+        console.log(x);
+    }
+}
+var m1 = A(); //第一次执行A函数
+m1(); // 2
+m1(); // 3
+var m2 = A(); //第二次执行A函数
+m2();// 2
+m2();// 4
+
+
+</script>
+</html>
